@@ -6,13 +6,13 @@ class NormalizacionDatos:
         self.inicio = inicio
 
     def normalizar_valor(self, valor):
-        valor = valor.strip().lower()
-        if valor in ("si", "SÃ­"):
+        datos = valor.strip().lower()
+        if datos in ("si", "SÃ­"):
             return "SI"
-        elif valor in ("no", "no"):
+        elif datos in ("no", "no"):
             return "NO"
         else:
-            return valor
+            return datos
 
     def renumerar_ids(self, filas):
         contador = self.inicio
