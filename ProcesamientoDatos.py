@@ -1,20 +1,23 @@
-from NormalizacionDatos import NormalizacionDatos as Nor
-from GestionarArchivo import GestionarArchivo as ges
+from GestionarArchivo import GestionarArchivo
+from NormalizacionDatos import NormalizacionDatos
 
-archivo=ges()
-datos=archivo.leer_datos("dataset5_patient_diagnoses.csv")
-
-funsion=Nor()
+gestor = GestionarArchivo()
+datos = gestor.leer_datos("dataset5_patient_diagnoses.csv")
+normalizar = NormalizacionDatos()
+normalizar.RemplasarEspaciosBacios(datos)
+for dato in datos:
+    dato["admission_date"] = normalizar.convertirFecha(dato["admission_date"], "%Y-%m-%d")
+    dato["discharge_date"] = normalizar.convertirFecha(dato["discharge_date"], "%Y-%m-%d")
 
 while True:
     print("Menu \n 1. ver lista \n 2. no dificar espacion en blanco LOSD")
     opcion=input()
 
     if opcion=="1":
-        funsion.MostrarListado(datos)
+        normalizar.MostrarListado(datos)
         menu=input()
     elif opcion=="2":
-        funsion.RemplasarEspaciosBacios(datos)
+        
         menu=input()
 
     else:
