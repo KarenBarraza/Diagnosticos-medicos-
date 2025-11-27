@@ -3,10 +3,26 @@ from NormalizacionDatos import NormalizacionDatos
 import csv
 
 gestor = GestionarArchivo()
-filas = gestor.leer_datos("dataset5_patient_diagnoses.csv")  
+datos = gestor.leer_datos("dataset5_patient_diagnoses.csv")
+normalizar = NormalizacionDatos()
+normalizar.RemplasarEspaciosBacios(datos)
+normalizar.renumerar_ids(datos)
 
-procesador = NormalizacionDatos(columna="patient_id", inicio=1001)
-filas = procesador.renumerar_ids(filas)
+for dato in datos:
+    dato["admission_date"] = normalizar.convertirFecha(dato["admission_date"], "%Y-%m-%d")
+    dato["discharge_date"] = normalizar.convertirFecha(dato["discharge_date"], "%Y-%m-%d")
 
-for fila in filas[:110]:
-    print(fila)
+while True:
+    print("Menu \n 1. ver lista \n 2. no dificar espacion en blanco LOSD")
+    opcion=input()
+
+    if opcion=="1":
+        normalizar.MostrarListado(datos)
+        menu=input()
+    elif opcion=="2":
+        
+        menu=input()
+
+    else:
+        print("opcion no valida vuelve a intentarlo")
+        menu=input()
