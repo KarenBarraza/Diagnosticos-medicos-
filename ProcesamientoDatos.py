@@ -9,6 +9,6 @@ for dato in datos:
     dato["admission_date"] = normalizar.convertirFecha(dato["admission_date"], "%Y-%m-%d")
     dato["discharge_date"] = normalizar.convertirFecha(dato["discharge_date"], "%Y-%m-%d")
 
-for i in datos:
+# for i in datos:
     print(datos)
 

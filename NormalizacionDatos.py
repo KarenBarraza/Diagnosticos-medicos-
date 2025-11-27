@@ -14,6 +14,16 @@ class NormalizacionDatos:
             except ValueError:
                 continue
         return "0000-00-00"
+    
+
+    # def calcular_fecha_salida(fecha_ingreso, dias_hospitalizacion):
+    #     fecha_ingreso = datetime.datetime.strptime(fecha_ingreso, "%Y-%m-%d")
+    #     fecha_salida = fecha_ingreso + datetime.timedelta(days=dias_hospitalizacion)
+    #     return fecha_salida.strftime("%Y-%m-%d")
+
+    # for dato in datos:
+    #     if dato["discharge_date"] == "":
+    #         dato["discharge_date"] = calcular_fecha_salida(dato["admission_date"], dato["length_of_stay_days"])
 
 
 
