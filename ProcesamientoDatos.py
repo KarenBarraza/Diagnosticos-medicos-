@@ -5,7 +5,7 @@ gestor = GestionarArchivo()
 datos = gestor.leer_datos("dataset5_patient_diagnoses.csv")
 
 normalizacion = NormalizacionDatos(datos)
-normalizacion.MostrarListado(n=10)
+normalizacion.MostrarListado
 datos_limpios = normalizacion.datos
 for fila in datos_limpios:
     print(fila)
