@@ -1,5 +1,6 @@
 from GestionarArchivo import GestionarArchivo
-import datetime
+from datetime import datetime
+from datetime import timedelta
 
 class NormalizacionDatos:
     def _init_(self):
@@ -25,8 +26,16 @@ class NormalizacionDatos:
     #     if dato["discharge_date"] == "":
     #         dato["discharge_date"] = calcular_fecha_salida(dato["admission_date"], dato["length_of_stay_days"])
 
+    def MostrarListado(self,datos):
+        for lista in datos:
+            print(lista)
 
+    def RemplasarEspaciosBacios(self,datos):
+        for lista in datos:
+            if lista['length_of_stay_days'] == "":
+                lista['length_of_stay_days']=0
+            elif lista['length_of_stay_days'] == "NA":
+                lista['length_of_stay_days']=0
+            else:
+                lista['length_of_stay_days']=int(lista['length_of_stay_days'])
 
-   
-
-    
