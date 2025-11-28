@@ -1,5 +1,5 @@
 from GestionarArchivo import GestionarArchivo
-from datetime import datetime
+from datetime import datetime , timedelta
 
 class NormalizacionDatos:
     def __init__(self):
@@ -13,13 +13,18 @@ class NormalizacionDatos:
                 return datetime.strptime(fecha, f).strftime(formato_salida)
             except ValueError:
                 continue
-            return "0000-00-00"
+        return "0000-00-00"
         
 
-    def calcular_fecha_salida(self, fecha_ingreso, dias_hospitalizacion):
-        fecha_ingreso = datetime.datetime.strptime(fecha_ingreso, "%Y-%m-%d")
-        fecha_salida = fecha_ingreso + datetime.timedelta(days=dias_hospitalizacion)
-        return fecha_salida.strftime("%Y-%m-%d")
+    def calcular_fecha_salida(self,datos):
+         for lista in datos:
+            if lista["discharge_date"]=='0000-00-00':
+                if lista['length_of_stay_days']<=0:
+                    lista["discharge_date"]=lista['admission_date']
+                else:
+                    ingresoF = datetime.strptime(lista['admission_date'],"%Y-%m-%d")
+                    salidaF=ingresoF+ timedelta(days=lista['length_of_stay_days'])
+                    lista["discharge_date"]=salidaF
 
 
     def procesar_datos(self):
@@ -43,4 +48,25 @@ class NormalizacionDatos:
                 lista['length_of_stay_days']=0
             else:
                 lista['length_of_stay_days']=int(lista['length_of_stay_days'])
+
+       
+    def ModificacionDias(self,datos):
+        for lista in datos:
+            if isinstance(lista["admission_date"], str):
+                f1 = datetime.strptime(lista["admission_date"], "%Y-%m-%d")
+            else:
+                f1 = lista["admission_date"]
+            if isinstance(lista["discharge_date"], str):
+                f2 = datetime.strptime(lista["discharge_date"], "%Y-%m-%d")
+            else:
+                f2 = lista["discharge_date"]
+            dias=(f2-f1).days
+            if dias <=0:
+                dias=1
+            lista['length_of_stay_days']=dias
+                
+
+
+            
+
 

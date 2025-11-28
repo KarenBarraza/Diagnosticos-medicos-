@@ -5,11 +5,11 @@ gestor = GestionarArchivo()
 datos = gestor.leer_datos("dataset5_patient_diagnoses.csv")
 normalizar = NormalizacionDatos()
 normalizar.ReemplazarEspaciosVacios(datos)
-
 for dato in datos:
     dato["admission_date"] = normalizar.convertirFecha(dato["admission_date"], "%Y-%m-%d")
     dato["discharge_date"] = normalizar.convertirFecha(dato["discharge_date"], "%Y-%m-%d")
-
+normalizar.calcular_fecha_salida(datos)
+normalizar.ModificacionDias(datos)
 
 while True:
     print("Menu \n 1. ver lista \n 2. Modificar espacion en blanco LOSD")
