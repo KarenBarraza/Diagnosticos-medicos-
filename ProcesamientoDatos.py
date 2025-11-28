@@ -1,10 +1,12 @@
 from GestionarArchivo import GestionarArchivo
 from NormalizacionDatos import NormalizacionDatos
-1
+import csv
+
 gestor = GestionarArchivo()
 datos = gestor.leer_datos("dataset5_patient_diagnoses.csv")
 
 normalizar = NormalizacionDatos()
+normalizar.renumerar_ids(datos)
 normalizar.limpiar_diagnosticos(datos)
 normalizar.ReemplazarEspaciosVacios(datos)
 for dato in datos:
@@ -27,4 +29,3 @@ while True:
     else:
         print("opcion no valida vuelve a intentarlo")
         menu=input()
-        

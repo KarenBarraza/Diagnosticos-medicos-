@@ -17,6 +17,23 @@ class NormalizacionDatos:
             fila["diagnosis_group"] = self.normalizar_texto(fila.get("diagnosis_group", ""))
 
 
+    def normalizar_valor(self, valor):
+        datos = valor.strip().lower()
+        if datos in ("si", "SÃ­"):
+            return "SI"
+        elif datos in ("no", "no"):
+            return "NO"
+        else:
+            return datos
+
+    def renumerar_ids(self, filas):
+        contador = 1001
+        for fila in filas:
+            fila["patient_id"] = contador
+            contador += 1
+        return filas
+
+
     formatos_entrada = ["%d/%m/%Y", "%Y-%m-%d", "%d-%m-%Y", "%m/%d/%Y"]
 
     def convertirFecha(self, fecha, formato_salida):
