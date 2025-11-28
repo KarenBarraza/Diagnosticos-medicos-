@@ -1,7 +1,6 @@
 import csv
 from csv import DictWriter
 
-
 class GestionarArchivo:
     def __init__(self):
         pass

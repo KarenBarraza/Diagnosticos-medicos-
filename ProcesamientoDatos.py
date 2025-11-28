@@ -3,7 +3,9 @@ from NormalizacionDatos import NormalizacionDatos
 1
 gestor = GestionarArchivo()
 datos = gestor.leer_datos("dataset5_patient_diagnoses.csv")
+
 normalizar = NormalizacionDatos()
+normalizar.limpiar_diagnosticos(datos)
 normalizar.ReemplazarEspaciosVacios(datos)
 for dato in datos:
     dato["admission_date"] = normalizar.convertirFecha(dato["admission_date"], "%Y-%m-%d")

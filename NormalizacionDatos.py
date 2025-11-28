@@ -1,9 +1,21 @@
 from GestionarArchivo import GestionarArchivo
 from datetime import datetime , timedelta
-gestor=GestionarArchivo()
+
 class NormalizacionDatos:
     def __init__(self):
         pass
+            
+    def normalizar_texto(self, texto):
+        if not texto:
+            return ""
+        # Convierte todo a minúscula y luego la primera letra a mayúscula
+        return texto.lower().capitalize()
+
+    def limpiar_diagnosticos(self,datos):
+        for fila in datos:
+            fila["diagnosis"] = self.normalizar_texto(fila.get("diagnosis", ""))
+            fila["diagnosis_group"] = self.normalizar_texto(fila.get("diagnosis_group", ""))
+
 
     formatos_entrada = ["%d/%m/%Y", "%Y-%m-%d", "%d-%m-%Y", "%m/%d/%Y"]
 
@@ -17,7 +29,7 @@ class NormalizacionDatos:
         
 
     def calcular_fecha_salida(self,datos):
-         for lista in datos:
+        for lista in datos:
             if lista["discharge_date"]=='0000-00-00':
                 if lista['length_of_stay_days']<=0:
                     lista["discharge_date"]=lista['admission_date']
@@ -49,7 +61,7 @@ class NormalizacionDatos:
             else:
                 lista['length_of_stay_days']=int(lista['length_of_stay_days'])
 
-       
+    
     def ModificacionDias(self,datos):
         for lista in datos:
             if isinstance(lista["admission_date"], str):
@@ -67,6 +79,7 @@ class NormalizacionDatos:
                 
 
     def CrearArchivo(self,datos):
+        gestor=GestionarArchivo()
         Nombre_colupnas=[
             'record_id','patient_id','age','gender',
             'diagnosis','diagnosis_group','admission_date',
