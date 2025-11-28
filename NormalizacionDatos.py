@@ -1,6 +1,6 @@
 from GestionarArchivo import GestionarArchivo
 from datetime import datetime , timedelta
-
+gestor=GestionarArchivo()
 class NormalizacionDatos:
     def __init__(self):
         pass
@@ -24,7 +24,7 @@ class NormalizacionDatos:
                 else:
                     ingresoF = datetime.strptime(lista['admission_date'],"%Y-%m-%d")
                     salidaF=ingresoF+ timedelta(days=lista['length_of_stay_days'])
-                    lista["discharge_date"]=salidaF
+                    lista["discharge_date"] = salidaF.strftime("%Y-%m-%d")
 
 
     def procesar_datos(self):
@@ -65,6 +65,15 @@ class NormalizacionDatos:
                 dias=1
             lista['length_of_stay_days']=dias
                 
+
+    def CrearArchivo(self,datos):
+        Nombre_colupnas=[
+            'record_id','patient_id','age','gender',
+            'diagnosis','diagnosis_group','admission_date',
+            'discharge_date','severity','has_comorbidities',
+            'length_of_stay_days','outcome']
+        ruta="pacientes_diagnosticados.csv"
+        gestor.escribir_csv(ruta,datos,Nombre_colupnas)
 
 
             
