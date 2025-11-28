@@ -12,14 +12,14 @@ normalizar.calcular_fecha_salida(datos)
 normalizar.ModificacionDias(datos)
 
 while True:
-    print("Menu \n 1. ver lista \n 2. Modificar espacion en blanco LOSD")
+    print("Menu \n 1. ver lista \n 2. escribir csv")
     opcion=input()
 
     if opcion=="1":
         normalizar.MostrarListado(datos)
         menu=input()
     elif opcion=="2":
-        
+        normalizar.CrearArchivo(datos)
         menu=input()
 
     else:
