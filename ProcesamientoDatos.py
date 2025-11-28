@@ -1,6 +1,7 @@
+#importar archivos claves
 from GestionarArchivo import GestionarArchivo
 from NormalizacionDatos import NormalizacionDatos
-import csv
+
 
 gestor = GestionarArchivo()
 datos = gestor.leer_datos("dataset5_patient_diagnoses.csv")
