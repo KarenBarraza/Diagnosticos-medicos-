@@ -50,18 +50,21 @@ class NormalizacionDatos:
                 lista['length_of_stay_days']=int(lista['length_of_stay_days'])
 
        
-
-
-
     def ModificacionDias(self,datos):
         for lista in datos:
-            if lista["discharge_date"]==lista["admission_date"]:
-                lista['length_of_stay_days']=1
+            if isinstance(lista["admission_date"], str):
+                f1 = datetime.strptime(lista["admission_date"], "%Y-%m-%d")
             else:
-                f1 = datetime.strptime(lista["admission_date"],"%d-%m-%Y")
+                f1 = lista["admission_date"]
+            if isinstance(lista["discharge_date"], str):
+                f2 = datetime.strptime(lista["discharge_date"], "%Y-%m-%d")
+            else:
                 f2 = lista["discharge_date"]
-                dias=f1-f2
-                lista['length_of_stay_days']=dias
+            dias=(f2-f1).days
+            if dias <=0:
+                dias=1
+            lista['length_of_stay_days']=dias
+                
 
 
             
