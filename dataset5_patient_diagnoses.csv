@@ -1,0 +1,111 @@
+record_id,patient_id,age,gender,diagnosis,diagnosis_group,admission_date,discharge_date,severity,has_comorbidities,length_of_stay_days,outcome
+1,1010,94,Otro,COVID-19,Respiratorio,25-01-2024,23-02-2024,Leve,No,19,Fallecido
+2,1013,15,F,COVID-19,Respiratorio,04-01-2024,17-02-2024,Leve,Si,18,Remitido
+3,1061,51,M,Migraña,Neurológico,29-01-2024,06-03-2024,Moderado,Si,NA,En tratamiento
+4,1049,8,F,Migraña,Neurológico,10-01-2024,,Grave,No,,Recuperado
+5,1057,20,M,Gripe,Respiratorio,12-01-2024,,Leve,No,10,Recuperado
+6,1009,93,M,Migraña,Neurológico,29-01-2024,,Moderado,Sí,7,En tratamiento
+7,1029,64,M,COVID-19,Respiratorio,28-01-2024,10-03-2024,Moderado,Sí,NA,En tratamiento
+8,1030,17,Otro,Gastroenteritis,Digestivo,17-01-2024,13-02-2024,Moderado,No,2,Recuperado
+9,1036,89,F,Gastroenteritis,Digestivo,14-01-2024,17-02-2024,Grave,No,,Remitido
+10,1053,0,M,Hipertensión,Cardiovascular,10-01-2024,20-02-2024,Grave,No,10,Remitido
+11,1017,50,Otro,Migraña,Neurológico,18-01-2024,,Grave,Si,,En tratamiento
+12,1060,68,Otro,COVID-19,Respiratorio,04-01-2024,20-02-2024,Moderado,Si,1,Recuperado
+13,1054,62,Otro,Hipertensión,Cardiovascular,30-12-2023,24-02-2024,Leve,Si,12,Recuperado
+14,1083,70,M,Diabetes tipo 2,Metabólico,08-02-2024,07-03-2024,Grave,No,NA,En tratamiento
+15,1030,74,Otro,Hipertensión,Cardiovascular,15-01-2024,15-02-2024,Leve,Si,18,Fallecido
+16,1053,52,M,Migraña,Neurológico,30-12-2023,11-02-2024,Leve,No,12,Remitido
+17,1027,91,M,COVID-19,Respiratorio,14-01-2024,,Moderado,No,NA,Fallecido
+18,1034,90,M,Gastroenteritis,Digestivo,03-02-2024,,Leve,Sí,16,Recuperado
+19,1100,78,F,COVID-19,Respiratorio,05-02-2024,08-03-2024,Leve,Si,19,Remitido
+20,1026,14,F,Diabetes tipo 2,Metabólico,30-01-2024,16-02-2024,Leve,No,11,Recuperado
+21,1033,62,Otro,Diabetes tipo 2,Metabólico,27-01-2024,,Leve,Si,NA,En tratamiento
+22,1008,89,M,Diabetes tipo 2,Metabólico,01-02-2024,,Leve,Si,,En tratamiento
+23,1054,12,F,Hipertensión,Cardiovascular,07-01-2024,21-02-2024,Grave,Sí,,Fallecido
+24,1013,72,F,COVID-19,Respiratorio,01-02-2024,08-03-2024,Moderado,No,,Fallecido
+25,1026,6,M,COVID-19,Respiratorio,07-01-2024,07-03-2024,Grave,No,,Fallecido
+26,1089,60,F,Migraña,Neurológico,29-12-2023,,Leve,No,,Recuperado
+27,1028,45,M,COVID-19,Respiratorio,08-01-2024,,Leve,No,,Fallecido
+28,1018,17,M,Gripe,Respiratorio,08-02-2024,03-03-2024,Grave,Si,8,Recuperado
+29,1002,93,Otro,Gripe,Respiratorio,20-01-2024,12-02-2024,Leve,Si,0,Recuperado
+30,1092,82,F,Migraña,Neurológico,12-01-2024,08-03-2024,Grave,Sí,11,Recuperado
+31,1013,30,F,Gripe,Respiratorio,04-02-2024,07-03-2024,Grave,No,,En tratamiento
+32,1022,44,M,Gastroenteritis,Digestivo,27-12-2023,19-02-2024,Leve,No,,Fallecido
+33,1017,1,F,COVID-19,Respiratorio,27-01-2024,28-02-2024,Leve,Si,NA,Fallecido
+34,1064,95,F,Gripe,Respiratorio,30-01-2024,25-02-2024,Moderado,Si,,Fallecido
+35,1061,56,Otro,COVID-19,Respiratorio,03-01-2024,01-03-2024,Leve,Si,,Remitido
+36,1049,60,Otro,Migraña,Neurológico,29-12-2023,04-03-2024,Moderado,Si,10,En tratamiento
+37,1046,50,M,Diabetes tipo 2,Metabólico,25-01-2024,,Grave,Sí,,En tratamiento
+38,1053,70,Otro,COVID-19,Respiratorio,29-12-2023,,Grave,Si,19,En tratamiento
+39,1094,81,M,Diabetes tipo 2,Metabólico,26-12-2023,17-02-2024,Moderado,Sí,NA,Fallecido
+40,1061,29,M,Hipertensión,Cardiovascular,03-02-2024,27-02-2024,Moderado,Sí,NA,En tratamiento
+41,1066,54,F,COVID-19,Respiratorio,10-01-2024,12-02-2024,Moderado,No,,Fallecido
+42,1022,65,M,Diabetes tipo 2,Metabólico,24-01-2024,25-02-2024,Leve,No,,Fallecido
+43,1084,23,F,Gastroenteritis,Digestivo,28-12-2023,23-02-2024,Leve,Si,,Remitido
+44,1024,78,M,Diabetes tipo 2,Metabólico,05-01-2024,,Leve,No,11,Recuperado
+45,1054,16,Otro,Hipertensión,Cardiovascular,05-01-2024,25-02-2024,Leve,No,16,En tratamiento
+46,1010,16,Otro,Gripe,Respiratorio,29-01-2024,12-02-2024,Moderado,Sí,NA,Recuperado
+47,1096,37,F,Migraña,Neurológico,16-01-2024,10-03-2024,Leve,No,NA,Recuperado
+48,1010,49,F,Migraña,Neurológico,20-01-2024,29-02-2024,Leve,Si,,Fallecido
+49,1095,26,M,Gastroenteritis,Digestivo,28-01-2024,26-02-2024,Moderado,No,14,Recuperado
+50,1008,18,F,Diabetes tipo 2,Metabólico,13-01-2024,14-02-2024,Grave,Sí,,En tratamiento
+51,1044,68,Otro,Diabetes tipo 2,Metabólico,04-01-2024,25-02-2024,Leve,No,,Recuperado
+52,1073,68,F,Hipertensión,Cardiovascular,25-01-2024,,Grave,No,,Fallecido
+53,1004,12,Otro,Gripe,Respiratorio,22-01-2024,14-02-2024,Grave,Si,,Fallecido
+54,1016,21,F,COVID-19,Respiratorio,07-02-2024,12-02-2024,Leve,No,NA,Recuperado
+55,1052,45,Otro,Gripe,Respiratorio,30-12-2023,,Moderado,Si,NA,Fallecido
+56,1020,60,M,COVID-19,Respiratorio,04-01-2024,07-03-2024,Leve,Si,,Fallecido
+57,1038,20,Otro,Gripe,Respiratorio,08-02-2024,07-03-2024,Moderado,Si,,Fallecido
+58,1006,60,Otro,Migraña,Neurológico,07-01-2024,14-02-2024,Moderado,Sí,3,Fallecido
+59,1076,90,Otro,COVID-19,Respiratorio,02-01-2024,,Moderado,Si,,Recuperado
+60,1049,7,Otro,Diabetes tipo 2,Metabólico,28-01-2024,01-03-2024,Moderado,Si,,Recuperado
+61,1095,66,Otro,Diabetes tipo 2,Metabólico,31-12-2023,,Leve,Si,NA,Remitido
+62,1074,54,M,Gastroenteritis,Digestivo,25-01-2024,,Grave,No,,Recuperado
+63,1000,23,M,Gripe,Respiratorio,11-01-2024,21-02-2024,Moderado,Sí,,Remitido
+64,1017,54,Otro,COVID-19,Respiratorio,05-02-2024,05-03-2024,Grave,Sí,NA,Recuperado
+65,1019,80,M,Gripe,Respiratorio,10-02-2024,12-02-2024,Leve,Si,10,Remitido
+66,1024,66,Otro,Migraña,Neurológico,05-02-2024,25-02-2024,Grave,Si,,En tratamiento
+67,1020,47,M,Diabetes tipo 2,Metabólico,29-12-2023,,Grave,Sí,,Fallecido
+68,1003,17,M,Gripe,Respiratorio,17-01-2024,26-02-2024,Moderado,Sí,NA,En tratamiento
+69,1005,53,F,Gastroenteritis,Digestivo,26-12-2023,02-03-2024,Grave,Si,NA,En tratamiento
+70,1025,16,Otro,Gastroenteritis,Digestivo,03-01-2024,,Moderado,No,NA,Fallecido
+71,1064,17,Otro,Migraña,Neurológico,16-01-2024,18-02-2024,Grave,Sí,NA,Recuperado
+72,1033,63,F,Gripe,Respiratorio,24-01-2024,03-03-2024,Grave,No,1,En tratamiento
+73,1010,10,F,Hipertensión,Cardiovascular,28-01-2024,09-03-2024,Moderado,Sí,,En tratamiento
+74,1040,68,F,Gripe,Respiratorio,08-01-2024,,Leve,Si,NA,En tratamiento
+75,1012,93,Otro,Gastroenteritis,Digestivo,22-12-2023,,Moderado,No,NA,Remitido
+76,1022,68,M,Diabetes tipo 2,Metabólico,24-12-2023,27-02-2024,Leve,Sí,NA,Recuperado
+77,1022,80,Otro,Gastroenteritis,Digestivo,30-01-2024,,Moderado,No,,Recuperado
+78,1096,9,M,Gripe,Respiratorio,31-01-2024,10-03-2024,Grave,Sí,,Recuperado
+79,1004,95,F,Diabetes tipo 2,Metabólico,15-01-2024,15-02-2024,Grave,Sí,NA,Remitido
+80,1058,7,Otro,COVID-19,Respiratorio,21-01-2024,12-02-2024,Moderado,Sí,,Recuperado
+81,1055,49,F,Migraña,Neurológico,10-02-2024,05-03-2024,Grave,Sí,,Fallecido
+82,1003,82,M,Migraña,Neurológico,20-01-2024,20-02-2024,Moderado,No,NA,En tratamiento
+83,1004,36,Otro,Gastroenteritis,Digestivo,22-01-2024,13-02-2024,Moderado,Sí,3,Remitido
+84,1069,60,Otro,Diabetes tipo 2,Metabólico,17-01-2024,18-02-2024,Moderado,No,,Recuperado
+85,1023,42,Otro,Gastroenteritis,Digestivo,05-02-2024,22-02-2024,Leve,Sí,,Fallecido
+86,1064,36,M,Migraña,Neurológico,03-01-2024,13-02-2024,Grave,Si,,Remitido
+87,1077,55,F,Hipertensión,Cardiovascular,20-01-2024,,Leve,No,,En tratamiento
+88,1036,79,M,Hipertensión,Cardiovascular,11-01-2024,,Grave,No,,Fallecido
+89,1010,95,F,COVID-19,Respiratorio,10-01-2024,20-02-2024,Moderado,Sí,NA,Fallecido
+90,1053,44,F,COVID-19,Respiratorio,20-01-2024,,Moderado,No,NA,Recuperado
+91,1013,0,F,COVID-19,Respiratorio,21-01-2024,13-02-2024,Leve,Sí,NA,Remitido
+92,1065,9,F,Gastroenteritis,Digestivo,26-01-2024,13-02-2024,Leve,No,7,En tratamiento
+93,1057,4,Otro,Diabetes tipo 2,Metabólico,07-01-2024,,Moderado,Si,,En tratamiento
+94,1034,95,F,Gripe,Respiratorio,18-01-2024,18-02-2024,Moderado,No,12,En tratamiento
+95,1040,90,M,Hipertensión,Cardiovascular,26-01-2024,14-02-2024,Moderado,Sí,NA,Recuperado
+96,1021,48,Otro,Gastroenteritis,Digestivo,06-02-2024,,Moderado,Si,,En tratamiento
+97,1095,62,Otro,Gripe,Respiratorio,30-12-2023,,Grave,Sí,NA,En tratamiento
+98,1011,76,M,Diabetes tipo 2,Metabólico,21-01-2024,29-02-2024,Leve,No,0,En tratamiento
+99,1078,78,F,Gastroenteritis,Digestivo,24-12-2023,29-02-2024,Leve,Si,8,Remitido
+100,1030,77,M,Diabetes tipo 2,Metabólico,25-01-2024,03-03-2024,Leve,No,NA,Fallecido
+101,1095,72,Otro,Diabetes tipo 2,Metabólico,26-01-2024,11-02-2024,Grave,Si,NA,En tratamiento
+102,1088,42,F,Diabetes tipo 2,Metabólico,28-01-2024,08-03-2024,Grave,Sí,0,Fallecido
+103,1042,47,F,Migraña,Neurológico,24-12-2023,,Leve,No,NA,Fallecido
+104,1056,31,F,Migraña,Neurológico,09-02-2024,02-03-2024,Leve,Si,NA,Remitido
+105,1047,36,M,COVID-19,Respiratorio,08-01-2024,05-03-2024,Grave,Sí,,Fallecido
+106,1040,85,M,Hipertensión,Cardiovascular,24-01-2024,15-02-2024,Grave,No,NA,En tratamiento
+107,1035,13,Otro,Hipertensión,Cardiovascular,03-02-2024,18-02-2024,Leve,Si,NA,Recuperado
+108,1072,11,Otro,COVID-19,Respiratorio,31-12-2023,19-02-2024,Moderado,Sí,NA,Remitido
+109,1072,52,Otro,Gastroenteritis,Digestivo,28-12-2023,03-03-2024,Leve,Si,,Fallecido
+110,1083,88,F,Gastroenteritis,Digestivo,09-01-2024,,Grave,Si,,Remitido
